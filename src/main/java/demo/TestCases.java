@@ -1,13 +1,7 @@
 package demo;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
-import java.util.logging.Level;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -16,25 +10,8 @@ public class TestCases {
     public TestCases()
     {
         System.out.println("Constructor: TestCases");
-
         WebDriverManager.chromedriver().timeout(30).setup();
-        ChromeOptions options = new ChromeOptions();
-        LoggingPreferences logs = new LoggingPreferences();
-
-        // Set log level and type
-        logs.enable(LogType.BROWSER, Level.INFO);
-        logs.enable(LogType.DRIVER, Level.ALL);
-        options.setCapability("goog:loggingPrefs", logs);
-
-        // Connect to the chrome-window running on debugging port
-        options.setExperimentalOption("debuggerAddress", "127.0.0.1:9222");
-
-        // Set path for log file
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "chromedriver.log");
-
-        driver = new ChromeDriver(options);
-
-        // Set browser to maximize and wait
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 

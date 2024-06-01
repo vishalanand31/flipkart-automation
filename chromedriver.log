@@ -1,0 +1,22 @@
+[1716369616.047][INFO]: Starting ChromeDriver 125.0.6422.76 (67dcf7562b8fb4ab0819135589e37a97bcc8942c-refs/branch-heads/6422@{#1086}) on port 22174
+[1716369616.047][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1716369616.339][INFO]: [06cf1df4af1cfe70c13c8ba0f9883315] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [  ],
+            "debuggerAddress": "125.0.6422.61 (",
+            "extensions": [  ]
+         },
+         "goog:loggingPrefs": {
+            "browser": "INFO",
+            "driver": "ALL"
+         }
+      } ]
+   }
+}
+[1716369616.364][INFO]: [06cf1df4af1cfe70c13c8ba0f9883315] RESPONSE InitSession ERROR invalid argument: entry 0 of 'firstMatch' is invalid
+from invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: cannot parse debuggerAddress
+from invalid argument: must be 'host:port'
